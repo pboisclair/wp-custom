@@ -1,10 +1,12 @@
 FROM nickistre/centos-lamp-xdebug:6.6 
 MAINTAINER Nicholas Istre <nicholas.istre@e-hps.com> 
 
-RUN     yum -y update && \
-    yum -y install wget && \
-    yum install -y tar.x86_64 && \
-    yum clean all
+RUN yum install tar
+
+#yum -y update && \
+#    yum -y install wget && \
+ #   yum install -y tar.x86_64 && \
+#    yum clean all
 
 # Install wp-cli 
 ADD https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar /usr/local/bin/wp
